@@ -1,0 +1,22 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mbecker",
+  "license": "ISC",
+  "dependencies": {
+    "del": "^2.2.2",
+    "firebase": "^3.4.1",
+    "google-cloud": "^0.41.2",
+    "merge": "^1.2.0",
+    "sharp": "^0.16.2"
+  },
+  "devDependencies": {
+    "babel-preset-es2015-node": "^6.1.1",
+    "babel-preset-stage-0": "^6.16.0"
+  }
+}

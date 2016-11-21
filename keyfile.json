@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "safaridigitalapp",
+  "private_key_id": "8e86c07f2bf3100f54d569ddeb17525c52e39063",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCgmd+bxcmjbFlr\n0wqwgNTRel+MXBWO/IcSmoYvzi3YbMdmUlLE9qAKc2YZrefhtc1nJr0NjnLt1aNO\n7Tu1EkdSCmaQIVahekz1moevzfYG4C9BgU+xnNggdUhMbsBq7l1koD7h3YZnG8Sb\nhn/rI+l50UhnVJFZIOceLYMRxw1JweajdE9Pnk5vCQxU6qMxgpFsnalt+316z+Nz\nod4DkPwqjPOK6mzG61FnNotsUiIExOFeKTh9NhMHx2Q2xLYvTJRkforUx4E3GM9Y\nDqMVW6GZrcEcdcW1f3QUEkF9yhZZFGLC5iBKPPB3sPa+xOwEUC4S0T6/y1cgqTal\nHQ2MmjURAgMBAAECggEADu0eLjEcw3aPfQj5RlxC61EvTjFEw6xOtXjtHcZQ1nuN\nsMHX9XxidXYyOBLEqWKnO34LNhZWMiqX6f78fKC9Ri+3RpACqDFgs7bwA3Pl+M+f\nNLxa9sv3/lRIKupkMcwDnBWUopNfKXgYNsgyXV1SFsNPsmLWu2zmbhSWyPEyF/eq\nxVT8QPhMyk0QWLEZFQXgta9SBac1ClpMp+vhnBnSgixvUAess6T52rrHgwpvV0H7\nMPLJVXuUMipHaL46YuaNGOjxTzuhGY6t6HHJzBLccGPkR5PsUwcBxe9uYCruqGFw\nf6NjMoSATocD7zM/MZ2a3C6WO2f/jQ5OsveAdqxs0QKBgQDVeezlnRDJ3PL6biMj\nzJtTIC9J5yc01mpG/QgHTy0u8hQkrJ4TYv1TJrC2MM4Mn9Qgg/ufD7jaZKNxN2kP\nSMs3qPR5uMxevMpECLOHxM1b127ZYv03EkxIfAyo8fYnXvLuE+kcB6A4vwqrE5MV\nqThrYD8A0WsGLnVxN5Lh5jurxQKBgQDAl50eC/e8XDX8I/9HqIeuHVtuJ2nLaeDB\npl2WpyHqjqJaw5w3So675ng0j/R0JB4rBWKWGJgB4kpW++1HHENpR6m/Zakp6LoT\n0NGTsTH/Ll994AuUWwWTs+Du7uC3vM5TurgjPV8GsWgy8kzt+2aWXZyFjJtI9VF/\nBHVOUQ383QKBgFXAso7R9yp/nQNINslsqYBMz3Iqbq9k6jA1+IGnJolTKRBKXv1+\nqDA8vIOTO1IK6hVdrzgIAsOH5bfXAFbpcOic8AftWfs8byvBKw0A21VnRtoAT6NN\nsGL1ochD2hOaqo9EZEGkNpJU+54ZMN5kqYtIkEZt2UYUZ4zhPBmOeK3ZAoGAbPOY\nY84baQi1VZ27pfs2Po7HEYrkc7nC92o5WafVLQ9h030Dm9fm5W+dIwcpIKbqFiZm\nvkjNfYtZyNmeQvM/Q4jSA7/sMhRBaEJivW2pvhWq2dfsVRIlFojVP/YNVIRQKNfh\nobXvUyb7ro6abKsjPv9YM8j2dBCr+PI5toNuKVUCgYAv+RM3S0DStpuhKUGawEp4\nEdioq5YnVd4k3CSoy/OKPdkppahsyoHxKpLIvQvHpDDeclDiAJQB25qKdFbAHkGx\npTc9T5lcbHZx8u36VpsNUsjpCW7y5y3MZrn8K3rggmZqlVOm2sTHFLFxJiAwnOrK\noIMaUAb1qictcMmzIzSvZw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "safaridigitalapp@appspot.gserviceaccount.com",
+  "client_id": "110381952237501903560",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/safaridigitalapp%40appspot.gserviceaccount.com"
+}
