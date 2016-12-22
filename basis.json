@@ -1,0 +1,31 @@
+{
+  "location" : {
+    "latitude" : -23.888061,
+    "longitude" : 31.969589,
+    "parkName" : "Kruger National Park"
+  },
+  "spottedby" : {
+    "121asdy23abv" : {
+      "name" : "Michael",
+      "profile" : "https://storage.googleapis.com/safaridigitalapp.appspot.com/icons/lego6.jpg"
+    },
+    "123abv" : {
+      "name" : "Mike",
+      "profile" : "https://storage.googleapis.com/safaridigitalapp.appspot.com/icons/lego3.jpg"
+    }
+  },
+  "tags" : {
+    "Creek" : "Creek",
+    "Dinosaur" : "Dinosaur",
+    "Dolphin" : "Dolphin",
+    "Duck" : "Duck",
+    "Elephant" : "Elephant",
+    "Forest" : "Forest",
+    "Fountain" : "Fountain"
+  },
+  "timestamp" : 1481313506957,
+  "images": {
+    "public" : "TEST",
+    "gcloud" : "TEST"
+  }
+}
