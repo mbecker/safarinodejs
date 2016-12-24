@@ -33,41 +33,115 @@ var folders = ["animals/", "attractions/"];
 folders.forEach(function(folder) {
   // loadFolder(folder)
   // laodFiles(folder);
-  
+  readFoldersUploadToFirebase(folder);
 });
 
+function readFoldersUploadToFirebase(src) {
+  var folders = getDirectories(path.join(__dirname, src));
+  folders.forEach(function(folder) {
+    console.log(folder);
+    saveJSONtoFirebase('kruger', 'Kruger National Park', folder, src);
+  });
+}
 
-saveJSONtoFirebase('addo', 'Addo Natioanl Elephant Park', 'animals');
-function saveJSONtoFirebase(park, parkname, folder){
+function getDirectories(srcpath) {
+  return fs.readdirSync(srcpath).filter(function(file) {
+    return fs.statSync(path.join(srcpath, file)).isDirectory();
+  });
+}
+
+
+// saveJSONtoFirebase('addo', 'Addo Natioanl Elephant Park', 'animals');
+function saveJSONtoFirebase(park, parkName, item, src){
   
-  const filepath = path.join(__dirname, folder, 'data.json');
+  const filepath = path.join(__dirname, src, 'data.json');
+  const itemFilepath = path.join(__dirname, src, item, 'data.json');
   
   const jsonBasis = jsonfile.readFileSync(filepath);
-  const number = Math.floor(Math.random() * 6) + 1;
-  var firebaseData = {
-    name: "test123"
-  };
-  const mergedJSON = merge(firebaseData, jsonBasis);
-  mergedJSON['images']['public'] = jsonBasis['images'][number]['public'];
-  mergedJSON['images']['gcloud'] = jsonBasis['images'][number]['gcloud'];
-  mergedJSON['images'].resized = {
-    '375x300': {
-      'public' : jsonBasis['images'][number]['resized']['375x300']['public'],
-      'gcloud' : jsonBasis['images'][number]['resized']['375x300']['gcloud']
-    }
+  const jsonItem  = jsonfile.readFileSync(itemFilepath);
+  const number = Math.floor(Math.random() * 999) + 1;
+
+  var itemName = '';
+  var firebaseID = '';
+  switch (item) {
+    case 'p1120770':
+      itemName = "Green Mountains"
+      firebaseID = "greenmountains" + "-" + number;
+      break;
+    case 'ocelot':
+      itemName = "Ocelot";
+      firebaseID = "ocelot" + "-" + number;
+      break;
+    case 'maxresdefault2':
+      itemName = "Lions in the wildness";
+      firebaseID = "lions-in-the-wildness" + "-" + number;
+      break;
+    case 'maxresdefault':
+      itemName = "Lions on the street";
+      firebaseID = "lions-on-the-street" + "-" + number;
+      break;
+    case 'mandrill':
+      itemName = "Mandrill";
+      firebaseID = "mandrill" + "-" + number;
+      break;
+    case 'Giraffe1':
+      itemName = "Giraffes eating";
+      firebaseID = "giraffes-eating" + "-" + number;
+      break;
+    case 'Elephant':
+      itemName = "Elephant's ass";
+      firebaseID = "elephants-ass" + "-" + number;
+      break;
+    case 'coyote':
+      itemName = "Coyote";
+      firebaseID = "coyote" + "-" + number;
+      break;
+    case 'coati':
+      itemName = "Coati";
+      firebaseID = "coati" + "-" + number;
+      break;
+    case 'Bison1':
+      itemName = "Coati";
+      firebaseID = "coati" + "-" + number;
+      break;
+    case 'African_elephant_warning_raised_trunk':
+      itemName = "Elephant raising trunk";
+      firebaseID = "elephants-raising-trunk" + "-" + number;
+      break;
+    case '15_a_KrugerNational':
+      itemName = "Elephants drinking";
+      firebaseID = "elpehants-drinking" + "-" + number;
+      break;
+    default:
+      itemName = item;
+      firebaseID = item + "-" + number;
   }
 
-  var itemRef = db.ref("park").child(park).child(folder).child("test123");
+  var firebaseData = {
+    name: itemName
+  };
+  const mergedJSON = merge(firebaseData, jsonBasis);
+  mergedJSON['images']['public'] = jsonItem['public'];
+  mergedJSON['images']['gcloud'] = jsonItem['gcloud'];
+  mergedJSON['images'].resized = {
+    '375x300': {
+      'public' : jsonItem['resized']['375x300']['public'],
+      'gcloud' : jsonItem['resized']['375x300']['gcloud']
+    }
+  }
+  mergedJSON['location']['parkName'] = parkName;
+
+  var itemRef = db.ref("park").child(park).child(src).child(firebaseID);
   itemRef.remove();
   itemRef.set(mergedJSON)
     .then(function(){
         console.log('### FIREBASE SAVED ###');
-        return process.exit();
+        return // process.exit();
     })
     .catch(function(error){
         console.log('### FIREBASE ERROR ###');
         console.log(error);
-        return process.exit();
+        return // process.exit();
     });
   
 }
@@ -83,7 +157,7 @@ function laodFiles(folder) {
 
   var i = 0;
   var jsonObjectAll = jsonfile.readFileSync(path.join(__dirname, 'basis.json'));
-
+  
   bucket.getFiles({ prefix: folder })
     .on('error', console.error)
     .on('response', function() {
